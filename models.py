@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
@@ -10,4 +10,3 @@ class Item(Base):
     name = Column(String, index=True)
     price = Column(Float)
     is_offer = Column(String, nullable=True)
-    
